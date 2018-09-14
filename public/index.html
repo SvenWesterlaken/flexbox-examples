@@ -1,0 +1,53 @@
+<!DOCTYPE html><html><head><title>Flexbox Examples</title><script type="text/javascript" src="script.min.js"></script><link href="style.min.css" type="text/css" rel="stylesheet"></head><body><header class="top"><h1>Flexbox examples</h1></header><section class="spreadnav"><h3>Spread out navigation</h3><div class="showcase"><nav><a href="#">Link 1</a><a href="#">Link 2</a><a href="#">Link 3</a><a href="#">Link 4</a><a href="#">Link 5</a></nav></div><pre><code>nav {
+  display: flex;
+  justify-content: space-around;
+}</code></pre></section><section class="centerunknown"><h3>Center in container with unknown height</h3><div class="showcase"><div class="container"><div class="content"></div><div class="content second"></div><div class="content third"></div></div></div><pre><code>.container {
+  height: 50vh; /* relative height */
+  display: flex;
+  align-items: center; /* center across the cross axis */
+  justify-content: center; /* center across the main axis */
+  flex-direction: column; /* display items from to to bottom */
+}</code></pre></section><section class="stretchcentercontent"><h3>Stretch container &amp; center content of it</h3><div class="showcase"><div class="container"><header>Header</header><div class="content-container"><div class="content"></div><div class="content second"></div><div class="content third"></div></div><footer>Footer</footer></div></div><pre><code>.container {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container {
+  flex: 1; /* shorthand for: flex-grow: 1; flex-shrink: 1; flex-basis: 1; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}</code></pre></section><section class="layout"><h3>Sidebar layout</h3><div class="showcase"><div class="container"><header>Header</header><main><div class="sidenav">sidenav</div><article><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.</p></article><article class="x2"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.</p></article></main><footer>Footer</footer></div></div><pre><code>.container {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+}
+ 
+main {
+  flex: 1;
+  display: flex;
+}
+
+.sidenav {
+  width: 200px;
+}
+ 
+article {
+  flex: 1;
+}
+ 
+article.x2 {
+  flex: 2;
+}</code></pre></section><section class="image"><h3>Vertically align text around vertical center of image</h3><div class="showcase"><div class="container"><img src="https://via.placeholder.com/120x120"><p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui.</p></div><div class="container"><input type="text" placeholder="Text"><button type="submit">Submit</button></div></div><pre><code>.container {
+  display: flex;
+  align-items: center;
+}
+
+p {
+  flex: 1;
+}
+
+input[type="text"] {
+  flex: 1;
+}</code></pre></section></body></html>

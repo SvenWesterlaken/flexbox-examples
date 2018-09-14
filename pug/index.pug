@@ -1,0 +1,20 @@
+doctype html
+
+include modules/mixins
+
+html
+  head
+    title Flexbox Examples
+    script(type="text/javascript", src="script.min.js")
+    link(href="style.min.css", type="text/css", rel="stylesheet")
+    
+  body
+    header.top
+      h1 Flexbox examples
+    
+    include sections/spreadnav.pug
+    include sections/centerunknown
+    include sections/stretchcentercontent
+    include sections/layout
+    include sections/image
+    

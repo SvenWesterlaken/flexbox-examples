@@ -1,0 +1,15 @@
+section.centerunknown
+  h3 Center in container with unknown height
+  
+  .showcase
+    .container
+      +content
+    
+  pre: code
+    | .container {
+    |   height: 50vh; /* relative height */
+    |   display: flex;
+    |   align-items: center; /* center across the cross axis */
+    |   justify-content: center; /* center across the main axis */
+    |   flex-direction: column; /* display items from to to bottom */
+    | }

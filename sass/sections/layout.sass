@@ -1,0 +1,30 @@
+.layout
+  .container
+    height: 50vh
+    background: #ffeaa7
+    display: flex
+    flex-direction: column
+
+    header, footer
+      padding: 16px
+      background: $text
+      color: $background
+
+    main
+      flex: 1
+      display: flex
+
+      article
+        padding: 0 3em
+        flex: 1
+        overflow-y: hidden
+
+        &.x2
+          flex: 2
+          background: #ff7675
+
+      .sidenav
+        padding: 1em
+        width: 200px
+        background: #74b9ff
+        box-sizing: border-box

@@ -1,0 +1,24 @@
+section.stretchcentercontent
+  h3 Stretch container &amp; center content of it
+  
+  .showcase
+    .container
+      header Header
+      .content-container
+        +content
+      footer Footer
+      
+  pre: code
+    | .container {
+    |   height: 50vh;
+    |   display: flex;
+    |   flex-direction: column;
+    | }
+    |
+    | .content-container {
+    |   flex: 1; /* shorthand for: flex-grow: 1; flex-shrink: 1; flex-basis: 1; */
+    |   display: flex;
+    |   flex-direction: column;
+    |   justify-content: center;
+    | }
+  
